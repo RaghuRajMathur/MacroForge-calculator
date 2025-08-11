@@ -1,4 +1,4 @@
-<img width="1175" height="416" alt="image" src="https://github.com/user-attachments/assets/0cd45c64-6a57-4890-a08e-dc2f797b0c2c" />MacroForge - Professional Macro Calculator
+MacroForge - Professional Macro Calculator
 A comprehensive, responsive macro calculator built with Next.js that provides personalized nutrition plans, workout routines, and PDF reports for fitness enthusiasts.
 
 Features
@@ -47,21 +47,26 @@ PDF Generation: jsPDF for client-side PDF creation
 
 Icons: Lucide React for consistent iconography
 
+Deployment: Vercel with automatic deployments
+
 Installation
-1. Clone the repository:
-#git clone https://github.com/yourusername/MacroForge-calculator.git
-#cd macro-calculator-nextjs
+Clone the repository:
 
-2. Install dependencies:
-#npm install
+bash
+git clone https://github.com/yourusername/MacroForge-calculator.git
+cd macro-calculator-nextjs
+Install dependencies:
 
-3. Run the development server:
-#npm run dev
+bash
+npm install
+Run the development server:
 
-4. Open http://localhost:3000 in your browser.
+bash
+npm run dev
+Open http://localhost:3000 in your browser.
 
-Project Structure:-
-
+Project Structure
+text
 src/
 ├── app/
 │   ├── globals.css          # Global styles and CSS variables
@@ -81,8 +86,6 @@ src/
 │   └── shared.module.css
 └── utils/
     └── pdfGenerator.js     # PDF generation utility
-
-
 Usage
 Basic Calculation
 Enter personal information (age, gender, height, weight)
@@ -174,54 +177,78 @@ Workout plans adapted from fitness industry standards
 
 Screenshots
 Landing Page
-<img width="1900" height="877" alt="image" src="https://github.com/user-attachments/assets/a071837b-a092-4dd9-bd7c-0f75645b5583" />
-
-
+<img width="1900" height="877" alt="Landing Page" src="https://github.com/user-attachments/assets/a071837b-a092-4dd9-bd7c-0f75645b5583" />
 Calculator Form
-<img width="1900" height="873" alt="image" src="https://github.com/user-attachments/assets/067b3723-4403-4b82-8618-10ee9582d48e" />
-<img width="1900" height="871" alt="image" src="https://github.com/user-attachments/assets/51ecc0ca-6aca-4884-8131-552b59bb494f" />
-<img width="1900" height="874" alt="image" src="https://github.com/user-attachments/assets/ed08ae5c-d66e-4d46-a59b-2329845d5926" />
-<img width="1899" height="874" alt="image" src="https://github.com/user-attachments/assets/1016b251-c2e5-4d01-abe8-4391d787d19c" />
+Personal Information Input
+<img width="1900" height="873" alt="Calculator Form - Personal Info" src="https://github.com/user-attachments/assets/067b3723-4403-4b82-8618-10ee9582d48e" />
 
+Goal Selection
+<img width="1900" height="871" alt="Calculator Form - Goal Selection" src="https://github.com/user-attachments/assets/51ecc0ca-6aca-4884-8131-552b59bb494f" />
+
+Activity Level Selection
+<img width="1900" height="874" alt="Calculator Form - Activity Level" src="https://github.com/user-attachments/assets/ed08ae5c-d66e-4d46-a59b-2329845d5926" />
+
+Complete Form View
+<img width="1899" height="874" alt="Calculator Form - Complete View" src="https://github.com/user-attachments/assets/1016b251-c2e5-4d01-abe8-4391d787d19c" />
 
 Results Overview
-<img width="1900" height="873" alt="image" src="https://github.com/user-attachments/assets/b0b5319e-ea5a-449f-b517-0fe5f4ec5799" />
-<img width="1900" height="873" alt="image" src="https://github.com/user-attachments/assets/ffd0fe2d-cd29-4d66-b173-a2751d9ea9d3" />
-<img width="1900" height="874" alt="image" src="https://github.com/user-attachments/assets/3bda7442-7b53-4483-ace9-a7ccb38a04bd" />
-<img width="1898" height="873" alt="image" src="https://github.com/user-attachments/assets/1120867d-4afa-4f43-8fb0-045a55e6b129" />
-<img width="1900" height="871" alt="image" src="https://github.com/user-attachments/assets/1b2ee3f9-7ce7-4c20-a2ef-428d0ecaee68" />
-<img width="1900" height="714" alt="image" src="https://github.com/user-attachments/assets/622f9700-d035-4d1e-8223-e4993d6f0321" />
+Results Header & Statistics
+<img width="1900" height="873" alt="Results Overview - Header" src="https://github.com/user-attachments/assets/b0b5319e-ea5a-449f-b517-0fe5f4ec5799" />
 
+Macro Chart & Information Panel
+<img width="1900" height="873" alt="Results Overview - Charts" src="https://github.com/user-attachments/assets/ffd0fe2d-cd29-4d66-b173-a2751d9ea9d3" />
 
-Macro Chart
-<img width="742" height="759" alt="image" src="https://github.com/user-attachments/assets/dc95c893-f3cd-4244-b230-f4e2269d74e3" />
+Progress Tracking Tips
+<img width="1900" height="874" alt="Results Overview - Tips" src="https://github.com/user-attachments/assets/3bda7442-7b53-4483-ace9-a7ccb38a04bd" />
 
-Workout Plan
-<img width="1159" height="835" alt="image" src="https://github.com/user-attachments/assets/abc2f437-26aa-4888-a30d-ddd65ea2973c" />
-<img width="1898" height="871" alt="image" src="https://github.com/user-attachments/assets/738aae3b-6d0f-45d4-9178-2456653aa2f7" />
-<img width="1900" height="871" alt="image" src="https://github.com/user-attachments/assets/17a16c3d-b050-4213-969c-69501386e3d3" />
+Macro Timing Recommendations
+<img width="1898" height="873" alt="Results Overview - Timing" src="https://github.com/user-attachments/assets/1120867d-4afa-4f43-8fb0-045a55e6b129" />
 
+Quick Summary & Action Buttons
+<img width="1900" height="871" alt="Results Overview - Summary" src="https://github.com/user-attachments/assets/1b2ee3f9-7ce7-4c20-a2ef-428d0ecaee68" />
 
-Diet Plan
-<img width="1175" height="416" alt="image" src="https://github.com/user-attachments/assets/d5e8303b-f05c-4385-930d-957534e91589" />
-<img width="1900" height="876" alt="image" src="https://github.com/user-attachments/assets/0ea55866-d8bc-4486-b0c0-1540357a90d6" />
-<img width="1162" height="823" alt="image" src="https://github.com/user-attachments/assets/a06752dd-8a2f-4d37-8554-d5141aa331d6" />
-<img width="1890" height="870" alt="image" src="https://github.com/user-attachments/assets/5ef95a3d-0e30-4e93-a190-1f2eff6fb382" />
-<img width="1898" height="869" alt="image" src="https://github.com/user-attachments/assets/0b49828b-f805-472e-b12b-596a56cc387c" />
-<img width="1899" height="872" alt="image" src="https://github.com/user-attachments/assets/0074c3b0-ceea-4cbc-8392-ac4f42bc7112" />
-<img width="1898" height="873" alt="image" src="https://github.com/user-attachments/assets/79541784-abba-4175-b8d2-3cea32cd7ca4" />
+Footer & Disclaimer
+<img width="1900" height="714" alt="Results Overview - Footer" src="https://github.com/user-attachments/assets/622f9700-d035-4d1e-8223-e4993d6f0321" />
 
+Interactive Macro Chart
+<img width="742" height="759" alt="Macro Breakdown Chart" src="https://github.com/user-attachments/assets/dc95c893-f3cd-4244-b230-f4e2269d74e3" />
+Workout Plan Tab
+Workout Plan Overview
+<img width="1159" height="835" alt="Workout Plan - Overview" src="https://github.com/user-attachments/assets/abc2f437-26aa-4888-a30d-ddd65ea2973c" />
 
-PDF Report
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6b0e78a2-b747-4f99-87f8-52d4cf91dcf5" />
+Weekly Schedule
+<img width="1898" height="871" alt="Workout Plan - Schedule" src="https://github.com/user-attachments/assets/738aae3b-6d0f-45d4-9178-2456653aa2f7" />
 
+Exercise Details
+<img width="1900" height="871" alt="Workout Plan - Exercises" src="https://github.com/user-attachments/assets/17a16c3d-b050-4213-969c-69501386e3d3" />
 
-Contact
-raghuu715@gmail.com
+Diet Plan Tab
+Diet Plan Header
+<img width="1175" height="416" alt="Diet Plan - Header" src="https://github.com/user-attachments/assets/0cd45c64-6a57-4890-a08e-dc2f797b0c2c" />
 
-Project Link: https://github.com/yourusername/macro-calculator-nextjs
+Calorie Distribution
+<img width="1900" height="876" alt="Diet Plan - Calorie Distribution" src="https://github.com/user-attachments/assets/0ea55866-d8bc-4486-b0c0-1540357a90d6" />
 
+Meal Planning Guide
+<img width="1162" height="823" alt="Diet Plan - Meal Planning" src="https://github.com/user-attachments/assets/a06752dd-8a2f-4d37-8554-d5141aa331d6" />
+
+Sample Meal Plans
+<img width="1890" height="870" alt="Diet Plan - Sample Meals" src="https://github.com/user-attachments/assets/5ef95a3d-0e30-4e93-a190-1f2eff6fb382" />
+
+Nutrition Guidelines
+<img width="1898" height="869" alt="Diet Plan - Guidelines" src="https://github.com/user-attachments/assets/0b49828b-f805-472e-b12b-596a56cc387c" />
+
+Food Recommendations
+<img width="1899" height="872" alt="Diet Plan - Food Recommendations" src="https://github.com/user-attachments/assets/0074c3b0-ceea-4cbc-8392-ac4f42bc7112" />
+
+Shopping List
+<img width="1898" height="873" alt="Diet Plan - Shopping List" src="https://github.com/user-attachments/assets/79541784-abba-4175-b8d2-3cea32cd7ca4" />
+
+PDF Report Generation
+<img width="1920" height="1080" alt="PDF Report" src="https://github.com/user-attachments/assets/6b0e78a2-b747-4f99-87f8-52d4cf91dcf5" />
+Live Demo & Contact
 Live Demo: https://macro-forge-calculator.vercel.app/
 
+Project Repository: https://github.com/yourusername/macro-calculator-nextjs
 
-Deployment: Vercel with automatic deployments
+Contact: raghuu715@gmail.com
