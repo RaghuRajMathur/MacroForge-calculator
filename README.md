@@ -1,7 +1,8 @@
 MacroForge - Professional Macro Calculator
 A comprehensive, responsive macro calculator built with Next.js that provides personalized nutrition plans, workout routines, and PDF reports for fitness enthusiasts.
 
-Features
+Features:-
+
 Core Functionality
 Advanced Macro Calculations: Uses Mifflin-St Jeor equation for accurate BMR calculations
 
