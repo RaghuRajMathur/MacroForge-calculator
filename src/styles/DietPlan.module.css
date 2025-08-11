@@ -1,0 +1,258 @@
+.dietContainer {
+  padding: 2rem;
+}
+
+.dietTypeSelector {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--macros-gray-100);
+  border-radius: 16px;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.dietTypeButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background: transparent;
+  border-radius: 12px;
+  font-weight: 600;
+  color: var(--macros-gray-600);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dietTypeButton:hover {
+  background: white;
+  color: var(--macros-gray-800);
+}
+
+.dietTypeButton.active {
+  background: linear-gradient(135deg, var(--macros-green) 0%, #34D399 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.deficitInfo {
+  margin-bottom: 2rem;
+}
+
+.deficitCard {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.05) 0%, rgba(239, 68, 68, 0.02) 100%);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.deficitHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.deficitTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--macros-gray-900);
+  margin-bottom: 0.25rem;
+}
+
+.deficitDescription {
+  color: var(--macros-gray-600);
+  font-weight: 500;
+}
+
+.deficitStats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.deficitStat {
+  text-align: center;
+  padding: 1rem;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid var(--macros-gray-200);
+}
+
+.deficitNumber {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--macros-red);
+  margin-bottom: 0.25rem;
+}
+
+.deficitLabel {
+  font-size: 0.875rem;
+  color: var(--macros-gray-600);
+  font-weight: 500;
+}
+
+.planHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.planTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--macros-gray-900);
+  margin-bottom: 0.5rem;
+}
+
+.planDescription {
+  color: var(--macros-gray-600);
+  font-weight: 500;
+}
+
+.mealPlan {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.mealCard {
+  background: var(--macros-gray-50);
+  border-radius: 16px;
+  border: 1px solid var(--macros-gray-200);
+  overflow: hidden;
+}
+
+.mealHeader {
+  background: white;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--macros-gray-200);
+}
+
+.mealInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mealName {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--macros-gray-900);
+}
+
+.mealMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--macros-gray-600);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.mealOptions {
+  padding: 1.5rem;
+}
+
+.mealOption {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid var(--macros-gray-200);
+  margin-bottom: 1rem;
+}
+
+.mealOption:last-child {
+  margin-bottom: 0;
+}
+
+.optionName {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--macros-gray-900);
+  margin-bottom: 1rem;
+}
+
+.foodList {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.foodItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  color: var(--macros-gray-700);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.macroBreakdown {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--macros-purple);
+}
+
+.weeklySchedule {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(16, 185, 129, 0.02) 100%);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+}
+
+.scheduleTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--macros-gray-900);
+  margin-bottom: 1rem;
+}
+
+.scheduleTips {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.tip {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--macros-gray-200);
+  font-size: 0.875rem;
+  color: var(--macros-gray-700);
+}
+
+@media (max-width: 768px) {
+  .dietTypeSelector {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .dietTypeButton {
+    justify-content: center;
+  }
+  
+  .deficitStats {
+    grid-template-columns: 1fr;
+  }
+  
+  .mealInfo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .scheduleTips {
+    grid-template-columns: 1fr;
+  }
+}

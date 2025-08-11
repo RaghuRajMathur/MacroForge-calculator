@@ -1,0 +1,160 @@
+.workoutContainer {
+  padding: 2rem;
+}
+
+.workoutHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.workoutTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--macros-gray-900);
+  margin-bottom: 0.5rem;
+}
+
+.workoutDescription {
+  color: var(--macros-gray-600);
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+
+.workoutStats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: var(--macros-gray-50);
+  border-radius: 12px;
+}
+
+.statLabel {
+  font-size: 0.875rem;
+  color: var(--macros-gray-600);
+  font-weight: 500;
+}
+
+.statValue {
+  font-size: 0.875rem;
+  color: var(--macros-gray-900);
+  font-weight: 600;
+}
+
+.workoutPlan {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.dayCard {
+  background: var(--macros-gray-50);
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid var(--macros-gray-200);
+}
+
+.dayHeader {
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--macros-purple);
+}
+
+.dayTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--macros-purple);
+  margin-bottom: 0.25rem;
+}
+
+.daySubtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--macros-gray-900);
+}
+
+.exerciseList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.exerciseItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid var(--macros-gray-200);
+}
+
+.exerciseName {
+  font-weight: 600;
+  color: var(--macros-gray-900);
+}
+
+.exerciseDetails {
+  font-size: 0.875rem;
+  color: var(--macros-gray-600);
+  font-weight: 500;
+}
+
+.tipsSection {
+  background: linear-gradient(135deg, rgba(107, 70, 193, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+  border: 1px solid rgba(107, 70, 193, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+}
+
+.tipsTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--macros-gray-900);
+  margin-bottom: 1rem;
+}
+
+.tipsList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.tipItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: var(--macros-gray-700);
+  font-weight: 500;
+}
+
+.tipItem::before {
+  content: '✓';
+  color: var(--macros-green);
+  font-weight: bold;
+  margin-top: 0.125rem;
+}
+
+@media (max-width: 768px) {
+  .workoutStats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .workoutPlan {
+    grid-template-columns: 1fr;
+  }
+}

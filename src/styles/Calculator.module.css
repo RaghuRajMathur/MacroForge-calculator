@@ -1,0 +1,798 @@
+.calculatorContainer {
+  background: linear-gradient(135deg, var(--macros-gray-50) 0%, #f8fafc 100%);
+  padding: 100px 0 80px 0;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.calculatorContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 15% 20%, rgba(107, 70, 193, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 85% 80%, rgba(139, 92, 246, 0.02) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.calculatorContent {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 32px;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.calculatorCard {
+  background: white;
+  border-radius: 32px;
+  border: 1px solid var(--macros-gray-200);
+  box-shadow: 
+    0 25px 80px rgba(0, 0, 0, 0.08),
+    0 10px 40px rgba(0, 0, 0, 0.04),
+    0 0 0 1px rgba(255, 255, 255, 0.8);
+  padding: 60px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.calculatorCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, var(--macros-purple) 0%, #5cd1f6b3 100%);
+  border-radius: 32px 32px 0 0;
+}
+
+.formHeader {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.formTitle {
+  font-size: 2.75rem;
+  font-weight: 900;
+  color: var(--macros-gray-900);
+  margin-bottom: 16px;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  background: linear-gradient(135deg, var(--macros-gray-900) 0%, var(--macros-purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.formSubtitle {
+  font-size: 1.25rem;
+  color: var(--macros-gray-600);
+  font-weight: 500;
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+}
+
+.sectionTitle {
+  font-size: 1.375rem;
+  font-weight: 800;
+  color: var(--macros-gray-900);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 3px solid var(--macros-gray-100);
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--macros-purple) 0%, #5cd1f6b3 100%);
+  border-radius: 2px;
+}
+
+.sectionIcon {
+  color: var(--macros-purple);
+  padding: 8px;
+  background: rgba(107, 70, 193, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(107, 70, 193, 0.15);
+  flex-shrink: 0;
+}
+
+.personalInfoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+}
+
+.fieldLabel {
+  font-weight: 700;
+  color: var(--macros-gray-800);
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.unitText {
+  color: var(--macros-gray-500);
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.optionalText {
+  color: var(--macros-gray-400);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 13px;
+}
+
+/* ✅ Enhanced Goal Selection Styles */
+.goalGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.goalCard {
+  background: white;
+  border: 3px solid var(--macros-gray-200);
+  border-radius: 20px;
+  padding: 32px 24px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.goalCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: var(--goal-color, var(--macros-purple));
+  transform: scaleX(0);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 20px 20px 0 0;
+}
+
+.goalCard:hover {
+  border-color: var(--goal-color, var(--macros-purple));
+  box-shadow: 
+    0 12px 40px rgba(107, 70, 193, 0.12),
+    0 4px 16px rgba(107, 70, 193, 0.08);
+  transform: translateY(-6px) scale(1.02);
+}
+
+.goalCard:hover::before {
+  transform: scaleX(1);
+}
+
+.goalCard.selected {
+  border-color: var(--goal-color, var(--macros-purple));
+  background: linear-gradient(135deg, rgba(107, 70, 193, 0.08) 0%, rgba(139, 92, 246, 0.06) 100%);
+  box-shadow: 
+    0 16px 50px rgba(107, 70, 193, 0.15),
+    0 6px 20px rgba(107, 70, 193, 0.1);
+  transform: translateY(-4px);
+}
+
+.goalCard.selected::before {
+  transform: scaleX(1);
+}
+
+.goalred {
+  --goal-color: #ef4444;
+}
+
+.goalred.selected {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.08) 0%, rgba(239, 68, 68, 0.06) 100%);
+  box-shadow: 
+    0 16px 50px rgba(239, 68, 68, 0.15),
+    0 6px 20px rgba(239, 68, 68, 0.1);
+}
+
+.goalblue {
+  --goal-color: #3b82f6;
+}
+
+.goalblue.selected {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(59, 130, 246, 0.06) 100%);
+  box-shadow: 
+    0 16px 50px rgba(59, 130, 246, 0.15),
+    0 6px 20px rgba(59, 130, 246, 0.1);
+}
+
+.goalgreen {
+  --goal-color: #10b981;
+}
+
+.goalgreen.selected {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(16, 185, 129, 0.06) 100%);
+  box-shadow: 
+    0 16px 50px rgba(16, 185, 129, 0.15),
+    0 6px 20px rgba(16, 185, 129, 0.1);
+}
+
+.goalHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.goalIcon {
+  font-size: 2.5rem;
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--macros-gray-100);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.iconred {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.12) 0%, rgba(239, 68, 68, 0.08) 100%);
+  border: 2px solid rgba(239, 68, 68, 0.1);
+}
+
+.iconblue {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.12) 0%, rgba(59, 130, 246, 0.08) 100%);
+  border: 2px solid rgba(59, 130, 246, 0.1);
+}
+
+.icongreen {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(16, 185, 129, 0.08) 100%);
+  border: 2px solid rgba(16, 185, 129, 0.1);
+}
+
+.goalLabel {
+  font-weight: 800;
+  color: var(--macros-gray-900);
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.goalDesc {
+  color: var(--macros-gray-600);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* ✅ Enhanced Activity Level Styles */
+.activityGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
+}
+
+.activityCard {
+  background: white;
+  border: 3px solid var(--macros-gray-200);
+  border-radius: 16px;
+  padding: 28px 32px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.activityCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--macros-purple) 0%, #5cd1f6b3 100%);
+  transform: scaleX(0);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.activityCard:hover {
+  border-color: var(--macros-purple);
+  box-shadow: 0 8px 32px rgba(107, 70, 193, 0.12);
+  transform: translateY(-4px) scale(1.01);
+}
+
+.activityCard:hover::before {
+  transform: scaleX(1);
+}
+
+.activityCard.selected {
+  border-color: var(--macros-purple);
+  background: linear-gradient(135deg, rgba(107, 70, 193, 0.06) 0%, rgba(139, 92, 246, 0.04) 100%);
+  box-shadow: 0 12px 40px rgba(107, 70, 193, 0.15);
+  transform: translateY(-2px);
+}
+
+.activityCard.selected::before {
+  transform: scaleX(1);
+}
+
+.activityHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 16px;
+}
+
+.activityLabel {
+  font-weight: 800;
+  color: var(--macros-gray-900);
+  font-size: 17px;
+}
+
+.activityMultiplier {
+  color: var(--macros-purple);
+  font-weight: 700;
+  font-size: 13px;
+  background: rgba(107, 70, 193, 0.12);
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(107, 70, 193, 0.15);
+  box-shadow: 0 2px 8px rgba(107, 70, 193, 0.1);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.activityDesc {
+  color: var(--macros-gray-700);
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.activityDetail {
+  color: var(--macros-gray-500);
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.submitSection {
+  text-align: center;
+  padding-top: 40px;
+  position: relative;
+}
+
+.submitButton {
+  background: linear-gradient(135deg, var(--macros-purple) 0%, #5cd1f6b3 100%);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 24px 60px;
+  font-weight: 800;
+  font-size: 19px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 
+    0 12px 40px rgba(107, 70, 193, 0.25),
+    0 4px 16px rgba(107, 70, 193, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.submitButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.submitButton:hover::before {
+  left: 100%;
+}
+
+.submitButton:hover {
+  background: linear-gradient(135deg, var(--macros-purple-dark, #553C9A) 0%, var(--macros-purple) 80%);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 
+    0 20px 60px rgba(107, 70, 193, 0.35),
+    0 8px 30px rgba(107, 70, 193, 0.25);
+}
+
+.submitButton:active {
+  transform: translateY(-2px) scale(0.98);
+}
+
+/* ✅ Comprehensive Responsive Design */
+@media (max-width: 1200px) {
+  .calculatorContent {
+    max-width: 800px;
+    padding: 0 24px;
+  }
+  
+  .calculatorCard {
+    padding: 48px;
+  }
+  
+  .formTitle {
+    font-size: 2.5rem;
+  }
+  
+  .formSubtitle {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .calculatorContainer {
+    padding: 80px 0 60px 0;
+  }
+  
+  .calculatorCard {
+    padding: 40px;
+    border-radius: 28px;
+  }
+  
+  .personalInfoGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  
+  .goalGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .formTitle {
+    font-size: 2.25rem;
+  }
+  
+  .form {
+    gap: 40px;
+  }
+  
+  .goalIcon {
+    width: 70px;
+    height: 70px;
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .calculatorContainer {
+    padding: 60px 0 40px 0;
+  }
+  
+  .calculatorContent {
+    padding: 0 20px;
+  }
+  
+  .calculatorCard {
+    padding: 32px 24px;
+    border-radius: 24px;
+  }
+  
+  .formHeader {
+    margin-bottom: 40px;
+  }
+  
+  .formTitle {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+  
+  .formSubtitle {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+  
+  .personalInfoGrid,
+  .goalGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .goalCard {
+    padding: 24px 20px;
+  }
+  
+  .goalIcon {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+  
+  .goalLabel {
+    font-size: 16px;
+  }
+  
+  .goalDesc {
+    font-size: 14px;
+  }
+  
+  .activityCard {
+    padding: 20px 24px;
+  }
+  
+  .activityHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .activityMultiplier {
+    align-self: flex-end;
+  }
+  
+  .submitButton {
+    padding: 20px 40px;
+    font-size: 17px;
+    gap: 12px;
+  }
+  
+  .form {
+    gap: 32px;
+  }
+  
+  .sectionTitle {
+    font-size: 1.25rem;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .calculatorContainer {
+    padding: 40px 0 30px 0;
+  }
+  
+  .calculatorContent {
+    padding: 0 16px;
+  }
+  
+  .calculatorCard {
+    padding: 24px 20px;
+    border-radius: 20px;
+  }
+  
+  .formHeader {
+    margin-bottom: 32px;
+  }
+  
+  .formTitle {
+    font-size: 1.75rem;
+    -webkit-text-fill-color: var(--macros-gray-900);
+    background: none;
+  }
+  
+  .formSubtitle {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .goalCard {
+    padding: 20px 16px;
+    border-radius: 16px;
+  }
+  
+  .goalIcon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.75rem;
+  }
+  
+  .goalLabel {
+    font-size: 15px;
+  }
+  
+  .goalDesc {
+    font-size: 13px;
+  }
+  
+  .activityCard {
+    padding: 16px 20px;
+    border-radius: 12px;
+  }
+  
+  .activityLabel {
+    font-size: 16px;
+  }
+  
+  .activityDesc {
+    font-size: 14px;
+  }
+  
+  .activityDetail {
+    font-size: 13px;
+  }
+  
+  .activityMultiplier {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+  
+  .submitButton {
+    padding: 18px 32px;
+    font-size: 16px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .form {
+    gap: 28px;
+  }
+  
+  .sectionTitle {
+    font-size: 1.125rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .sectionTitle::after {
+    width: 40px;
+  }
+  
+  .fieldLabel {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .calculatorCard {
+    padding: 20px 16px;
+  }
+  
+  .formTitle {
+    font-size: 1.5rem;
+  }
+  
+  .formSubtitle {
+    font-size: 0.85rem;
+  }
+  
+  .goalCard {
+    padding: 16px 12px;
+  }
+  
+  .goalIcon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+  }
+  
+  .submitButton {
+    padding: 16px 24px;
+    font-size: 15px;
+  }
+}
+
+/* ✅ Landscape mobile orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+  .calculatorContainer {
+    padding: 30px 0 20px 0;
+  }
+  
+  .calculatorCard {
+    padding: 24px 20px;
+  }
+  
+  .formHeader {
+    margin-bottom: 24px;
+  }
+  
+  .formTitle {
+    font-size: 1.75rem;
+  }
+  
+  .form {
+    gap: 24px;
+  }
+  
+  .goalGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  
+  .goalCard {
+    padding: 16px 12px;
+  }
+  
+  .goalIcon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+}
+
+/* ✅ Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .goalCard,
+  .activityCard,
+  .submitButton {
+    transition: none;
+  }
+  
+  .goalCard:hover,
+  .activityCard:hover,
+  .submitButton:hover {
+    transform: none;
+  }
+  
+  .submitButton::before {
+    display: none;
+  }
+}
+
+/* ✅ High contrast mode support */
+@media (prefers-contrast: high) {
+  .goalCard,
+  .activityCard {
+    border-width: 4px;
+  }
+  
+  .formTitle {
+    -webkit-text-fill-color: var(--macros-gray-900);
+    background: none;
+  }
+}
+
+/* ✅ Focus states for accessibility */
+.goalCard:focus,
+.activityCard:focus {
+  outline: 3px solid var(--macros-purple);
+  outline-offset: 2px;
+}
+
+.submitButton:focus {
+  outline: 3px solid rgba(107, 70, 193, 0.5);
+  outline-offset: 4px;
+}
