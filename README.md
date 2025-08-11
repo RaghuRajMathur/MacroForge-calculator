@@ -280,7 +280,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 | Resource | Link |
 |----------|------|
 | **Live Demo** | [https://macro-forge-calculator.vercel.app/](https://macro-forge-calculator.vercel.app/) |
-| **Repository** | [https://github.com/yourusername/macro-calculator-nextjs](https://github.com/yourusername/macro-calculator-nextjs) |
+| **Repository** | [https://github.com/yourusername/macro-calculator-nextjs]([https://github.com/yourusername/macro-calculator-nextjs](https://github.com/RaghuRajMathur/MacroForge-calculator)) |
 | **Contact** | [raghuu715@gmail.com](mailto:raghuu715@gmail.com) |
 
 ***
