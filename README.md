@@ -221,5 +221,7 @@ raghuu715@gmail.com
 
 Project Link: https://github.com/yourusername/macro-calculator-nextjs
 
-Live Demo: https://your-app-name.vercel.app
+Live Demo: https://macro-forge-calculator.vercel.app/
+
+
 Deployment: Vercel with automatic deployments
