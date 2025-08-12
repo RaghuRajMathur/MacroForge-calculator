@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div className={styles.headerContainer}>
       <div className={styles.headerContent}>
-        <h1 className={styles.title}>MacroForge</h1>
+        <h1 className={styles.title}>MacroForge- By Raghuraj Mathur</h1>
         <p className={styles.subtitle}>
           This free macro calculator, used by millions, provides you with the most 
           accurate macros and calories for your flexible dieting goals.
