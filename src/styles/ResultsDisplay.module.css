@@ -1,5 +1,6 @@
 .resultsContainer {
-  background: linear-gradient(135deg, var(--macros-gray-50) 0%, #f8fafc 100%);
+  background: #feffff82;
+  backdrop-filter: blur(3px);
   min-height: 100vh;
   padding: 80px 0;
   position: relative;

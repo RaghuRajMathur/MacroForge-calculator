@@ -1,5 +1,6 @@
 .calculatorContainer {
-  background: linear-gradient(135deg, var(--macros-gray-50) 0%, #f8fafc 100%);
+  background: #feffff82;
+  backdrop-filter: blur(3px);
   padding: 100px 0 80px 0;
   min-height: 100vh;
   position: relative;

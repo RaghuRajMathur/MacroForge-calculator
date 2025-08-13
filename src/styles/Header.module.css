@@ -1,5 +1,5 @@
 .headerContainer {
-  background: linear-gradient(135deg, var(--macros-purple) 0%, #5cd1f6b3 100%);
+  background: #794ff67b;
   padding: 80px 0 60px 0;
   position: relative;
   overflow: hidden;
@@ -7,30 +7,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.headerContainer::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  right: -20%;
-  width: 60%;
-  height: 200%;
-  background: radial-gradient(ellipse, rgba(255, 255, 255, 0.08) 0%, transparent 60%);
-  transform: rotate(-15deg);
-  z-index: 1;
-}
-
-.headerContainer::after {
-  content: '';
-  position: absolute;
-  bottom: -40%;
-  left: -15%;
-  width: 40%;
-  height: 180%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
-  transform: rotate(25deg);
-  z-index: 1;
 }
 
 .headerContent {

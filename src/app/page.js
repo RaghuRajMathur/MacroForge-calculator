@@ -5,6 +5,7 @@ import Header from '@/components/Header'
 import Calculator from '@/components/Calculator'
 import ResultsDisplay from '@/components/ResultsDisplay'
 import { calculateBMR, calculateTDEE, calculateMacros } from '@/utils/macroCalculations'
+import ParticlesComponent from '@/components/ParticlesBackground';
 
 export default function Home() {
   const [results, setResults] = useState(null)
@@ -33,6 +34,7 @@ export default function Home() {
     <main className="relative">
       {!results ? (
         <>
+          <ParticlesComponent />
           <Header />
           <Calculator onCalculate={handleCalculate} />
         </>
